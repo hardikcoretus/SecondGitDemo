@@ -3,17 +3,21 @@ package com.coretus.secondgitdemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+
+import com.coretus.secondgitdemo.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    
+
     String my_name;
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        my_name="hardik";
-        Log.e("my_name",my_name);
-           
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        Log.e("my_name", my_name);
+
     }
 }
